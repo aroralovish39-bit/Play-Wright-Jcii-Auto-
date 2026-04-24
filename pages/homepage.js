@@ -57,6 +57,7 @@ export class HomePage {
         }
     }
 
+    
     async clickInventory() {
         await this.inventoryLink.click();
         await expect(this.page).toHaveURL(/inventory/);
