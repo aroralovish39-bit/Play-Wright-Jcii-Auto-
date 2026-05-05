@@ -8,7 +8,8 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'http://127.0.0.1:3000',
+    baseURL: 'https://dev.jcautomax.com/',
+    //http://127.0.0.1:3000',
 
       httpCredentials: {
     username: 'lzdev',
@@ -16,6 +17,9 @@ export default defineConfig({
   },
     trace: 'on-first-retry',
     headless: false,
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    viewport: { width: 1920, height: 1080 },
   },
   projects: [
     {
